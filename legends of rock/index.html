@@ -1,0 +1,420 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foundation for Sites</title>
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/pricing-table.css">
+    <link rel="stylesheet" href="icons/foundation-icons.css"><!-- Enlace a nuestross iconos -->
+
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Ravi+Prakash" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Menu movil  -->
+    <div class="off-canvas-wrapper"><!-- -->
+      <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+
+        <div id="offCanvas" class="off-canvas position-left" data-off-canvas><!-- Posicion del menu despegable-->
+          <nav data-magellan>
+              <ul class="vertical menu" data-drilldown><!-- data-drilldown, animacion para el menu -->
+                <li><a href="#tickets-container">Tickets</a></li>
+                <li><a href="#lineup-container">Lineup</a>
+                    <ul class=" vertical menu">
+                      <li><a data-toggle-dia="panelViernes" href="#lineup-container">Viernes</a></li>
+                      <li><a data-toggle-dia="panelSabado" href="#lineup-container">Sabado</a></li>
+                      <li><a data-toggle-dia="panelDomingo" href="#lineup-container">Domingo</a></li>
+                    </ul>
+                  </li>
+                <li><a href="#info-container">Info</a></li>
+                <li><a href="#suscribete-container">Suscríbete</a></li>
+              </ul>
+          </nav>
+        </div>
+
+        <div class="off-canvas-content" data-off-canvas-content>
+
+                  <!--  Social-->
+                  <section id="social-container">
+                    <div class="row align-center text-center"> <!-- align-center(centrar columna)  text-center(Aliniar texto) -->
+                      <div class="small-1 columns">
+                            <!-- target="_blank" Es para abrir en otra pagina -->
+                            <!-- class="fi-social-facebook" Es para insertar al icono. -->
+                          <a href="#" target="_blank"><i class="fi-social-facebook"></i></a>
+                      </div>
+                      <div class="small-1 columns">
+                          <a href="#" target="_blank"><i class="fi-social-twitter"></i></a>
+                      </div>
+                      <div class="small-1 columns">
+                        <a href="#" target="_blank"><i class="fi-social-instagram"></i></a>
+                      </div>
+                    </div>
+                  </section>
+                  <!--  Social-->
+
+                  <!-- logo -->
+                  <section id="logo-container">
+                    <div class="callout text-center">
+                      <h1>Legends of Rock</h1>
+                    </div>
+                  </section>
+                  <!-- logo -->
+
+                  <!-- Menu -->
+                  <section id="scrollSticky" data-sticky-container><!-- data-sticky permite hacer que el menu nos sigua durante la navegacion -->
+                    <div class="data-sticky" data-sticky data-options="marginTop:0;"
+                     data-sticky-on="small" data-top-anchor="scrollSticky">
+                     <!-- data-top-anchor Permite que nuestro menu permanesca anclado, hasta hacer scrol  -->
+                      <nav id="menu-container" data-magellan><!-- Se utiliza para generar una navegacion fluida dentro de la paguina -->
+                        <ul class="menu align-spaced show-for-small-only"><!-- show-for-small-only permite ver solo en pantallas pequeñas -->
+                          <li><a href="#" data-toggle="offCanvas">Menu</a></li>
+                        </ul>
+                      <ul class="dropdown menu align-spaced show-for-medium" data-dropdown-menu>
+                        <!-- se le agregamos icon -top podemos poner los iconos arriba del texto -->
+                          <!-- align-spaced permite el espacio anuestro menu -->
+                          <!-- Permite ver el menu completo en dispositivos medianos en adelante  -->
+                        <li><a href="#tickets-container">Tickets</a></li>
+                          <li>
+                            <a href="#lineup-container">Lineup</a>
+                            <ul id="submenu-container" class="menu">
+                              <li><a data-toggle-dia="panelViernes" href="#lineup-container">Viernes</a></li>
+                              <li><a data-toggle-dia="panelSabado" href="#lineup-container">Sabado</a></li>
+                              <li><a data-toggle-dia="panelDomingo" href="#lineup-container">Domingo</a></li>
+                            </ul>
+                          </li>
+                        <li><a href="#info-container">Info</a></li>
+                        <li><a href="#suscribete-container">Suscríbete</a></li>
+                        </ul>
+                      </nav>
+                    </div>
+                  </section>
+                  <!-- /Menu -->
+
+                  <!--  Tickets -->
+                  <section id="Tickets-action">
+                    <div class="callout large text-center"><!-- callout large Hace mas grande la tarjeta -->
+                      <a href="#">
+                        <button class=" large button hollow">Comprar Boletos</button>
+                        <!-- large define el tamaño del boton con fondation  -->
+                        <!-- hollow Permite darle tranparencia al botton-->
+                      </a>
+                    </div>
+
+                  </section>
+                  <!--  /Tickets -->
+
+                  <!-- Lineup  -->
+                  <section id="lineup-container" data-magellan-target="lineup-container"><!--  data-magellan-target="lineup-container, se agrega para la navegacion fluida" -->
+                    <h3 class="text-center">Lineup</h3>
+                    <ul class="tabs text-center" data-tabs id="lineup-tabs">
+                      <li class="tabs-title is-active">
+                        <a href="#panelViernes">Viernes</a><!-- se utilisan los id de panel para hacer la navegacion -->
+                      </li>
+                      <li class="tabs-title">
+                        <a href="#panelSabado">Sábado</a>
+                      </li>
+                      <li class="tabs-title ">
+                        <a href="#panelDomingo">Domingo</a>
+                      </li>
+                    </ul>
+                    <div class="tabs-content" data-tabs-content="lineup-tabs"> <!-- colocamos el id, para que fondation sepa cual es el menu de navegacion -->
+
+                      <!--Viernes  -->
+                      <div class="tabs-panel is-active" id="panelViernes">
+                        <div class="row">
+                          <!-- Imagen 1  -->
+                          <div class="small-12 medium-6 colum">
+                            <div class="orbit">
+                              <div class="is-active orbit-slide">
+                                <img class="orbit-image" src="https://pre00.deviantart.net/87a8/th/pre/f/2011/272/7/2/led_zeppelin_wallpaper_2_by_nicollearl-d4b9hof.jpg" alt="Led zeppelin">
+                                <figcaption class="orbit-caption">Led zeppelin</figcaption>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Imagen 2  -->
+                          <div class="small-12 medium-6 colum">
+                            <div class="orbit">
+                              <div class="is-active orbit-slide">
+                                <img class="orbit-image" src="http://lagramoladekeith.com/wp-content/uploads/wordpress/Festify-Guns-n-ROses.jpg" alt="Guns n' Roses">
+                                <figcaption class="orbit-caption">Guns n' Roses</figcaption>
+                              </div>
+                            </div>
+                          </div>
+                        <!-- Imagen 3  -->
+                        <div class="small-12 medium-6 colum">
+                          <div class="orbit">
+                            <div class="is-active orbit-slide">
+                              <img class="orbit-image" src="http://rko.fm/wp/wp-content/uploads/2016/04/ACDC.jpg" alt="ACDC">
+                              <figcaption class="orbit-caption">ACDC</figcaption>
+                            </div>
+                          </div>
+                        </div>
+                      <!-- Imagen 4  -->
+                      <div class="small-12 medium-6 colum">
+                        <div class="orbit">
+                          <div class="is-active orbit-slide">
+                            <img class="orbit-image" src="https://i.pinimg.com/originals/f4/d1/0f/f4d10f471540893c02417e6e0edce407.jpg" alt="NIRVANA">
+                            <figcaption class="orbit-caption">NIRVANA</figcaption>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Imagen 5  -->
+                      <div class="small-12 medium-6 colum">
+                        <div class="orbit">
+                          <div class="is-active orbit-slide">
+                            <img class="orbit-image" src="https://i.ytimg.com/vi/7cS3hIWzOLk/maxresdefault.jpg" alt="LINKIN PARK">
+                            <figcaption class="orbit-caption">LINKIN PARK</figcaption>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Imagen 6  -->
+                      <div class="small-12 medium-6 colum">
+                        <div class="orbit">
+                          <div class="is-active orbit-slide">
+                            <img class="orbit-image" src="https://wallpaperscraft.com/image/queen_band_members_faces_background_3748_1920x1080.jpg" alt="QUEEN">
+                            <figcaption class="orbit-caption">QUEEN</figcaption>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                      <!--Sabado  -->
+                      <div class="tabs-panel" id="panelSabado">
+                        <div class="row">
+                          <!-- Imagen 1  -->
+                          <div class="small-12 medium-6 colum">
+                            <div class="orbit">
+                              <div class="is-active orbit-slide">
+                                <img class="orbit-image" src="http://lagramoladekeith.com/wp-content/uploads/wordpress/Festify-Guns-n-ROses.jpg" alt="Guns n' Roses">
+                                <figcaption class="orbit-caption">Guns n' Roses</figcaption>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Imagen 2  -->
+                          <div class="small-12 medium-6 colum">
+                            <div class="orbit">
+                              <div class="is-active orbit-slide">
+                                <img class="orbit-image" src="http://lagramoladekeith.com/wp-content/uploads/wordpress/Festify-Guns-n-ROses.jpg" alt="Guns n' Roses">
+                                <figcaption class="orbit-caption">Guns n' Roses</figcaption>
+                              </div>
+                            </div>
+                          </div>
+                        <!-- Imagen 3  -->
+                        <div class="small-12 medium-6 colum">
+                          <div class="orbit">
+                            <div class="is-active orbit-slide">
+                              <img class="orbit-image" src="http://lagramoladekeith.com/wp-content/uploads/wordpress/Festify-Guns-n-ROses.jpg" alt="Guns n' Roses">
+                              <figcaption class="orbit-caption">Guns n' Roses</figcaption>
+                            </div>
+                          </div>
+                        </div>
+                      <!-- Imagen 4  -->
+                      <div class="small-12 medium-6 colum">
+                        <div class="orbit">
+                          <div class="is-active orbit-slide">
+                            <img class="orbit-image" src="http://lagramoladekeith.com/wp-content/uploads/wordpress/Festify-Guns-n-ROses.jpg" alt="Guns n' Roses">
+                            <figcaption class="orbit-caption">Guns n' Roses</figcaption>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Imagen 5  -->
+                      <div class="small-12 medium-6 colum">
+                        <div class="orbit">
+                          <div class="is-active orbit-slide">
+                            <img class="orbit-image" src="http://lagramoladekeith.com/wp-content/uploads/wordpress/Festify-Guns-n-ROses.jpg" alt="Guns n' Roses">
+                            <figcaption class="orbit-caption">Guns n' Roses</figcaption>
+                          </div>
+                        </div>
+                      </div>
+                        <!-- Imagen 6  -->
+                        <div class="small-12 medium-6 colum">
+                          <div class="orbit">
+                            <div class="is-active orbit-slide">
+                              <img class="orbit-image" src="http://lagramoladekeith.com/wp-content/uploads/wordpress/Festify-Guns-n-ROses.jpg" alt="Guns n' Roses">
+                              <figcaption class="orbit-caption">Guns n' Roses</figcaption>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Domingo  -->
+                      <div class="tabs-panel" id="panelDomingo">
+                        <div class="row">
+                          <!-- Imagen 1  -->
+                          <div class="small-12 medium-6 colum">
+                            <div class="orbit">
+                              <div class="is-active orbit-slide">
+                                <img class="orbit-image" src="http://lagramoladekeith.com/wp-content/uploads/wordpress/Festify-Guns-n-ROses.jpg" alt="Guns n' Roses">
+                                <figcaption class="orbit-caption">Guns n' Roses</figcaption>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Imagen 2  -->
+                          <div class="small-12 medium-6 colum">
+                            <div class="orbit">
+                              <div class="is-active orbit-slide">
+                                <img class="orbit-image" src="http://lagramoladekeith.com/wp-content/uploads/wordpress/Festify-Guns-n-ROses.jpg" alt="Guns n' Roses">
+                                <figcaption class="orbit-caption">Guns n' Roses</figcaption>
+                              </div>
+                            </div>
+                          </div>
+                        <!-- Imagen 3  -->
+                        <div class="small-12 medium-6 colum">
+                          <div class="orbit">
+                            <div class="is-active orbit-slide">
+                              <img class="orbit-image" src="http://lagramoladekeith.com/wp-content/uploads/wordpress/Festify-Guns-n-ROses.jpg" alt="Guns n' Roses">
+                              <figcaption class="orbit-caption">Guns n' Roses</figcaption>
+                            </div>
+                          </div>
+                        </div>
+                      <!-- Imagen 4  -->
+                      <div class="small-12 medium-6 colum">
+                        <div class="orbit">
+                          <div class="is-active orbit-slide">
+                            <img class="orbit-image" src="http://lagramoladekeith.com/wp-content/uploads/wordpress/Festify-Guns-n-ROses.jpg" alt="Guns n' Roses">
+                            <figcaption class="orbit-caption">Guns n' Roses</figcaption>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Imagen 5  -->
+                      <div class="small-12 medium-6 colum">
+                        <div class="orbit">
+                          <div class="is-active orbit-slide">
+                            <img class="orbit-image" src="http://lagramoladekeith.com/wp-content/uploads/wordpress/Festify-Guns-n-ROses.jpg" alt="Guns n' Roses">
+                            <figcaption class="orbit-caption">Guns n' Roses</figcaption>
+                          </div>
+                        </div>
+                      </div>
+                        <!-- Imagen 6  -->
+                        <div class="small-12 medium-6 colum">
+                          <div class="orbit">
+                            <div class="is-active orbit-slide">
+                              <img class="orbit-image" src="http://lagramoladekeith.com/wp-content/uploads/wordpress/Festify-Guns-n-ROses.jpg" alt="Guns n' Roses">
+                              <figcaption class="orbit-caption">Guns n' Roses</figcaption>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      </div>
+                    </div>
+                </section>
+                  <!-- /Lineup  -->
+
+                  <!-- Comprar Boletos  -->
+                  <section id="tickets-container" data-magellan-target="tickets-container">
+                    <h3 class="text-center">Compra tus boletos</h3>
+                    <div class="row" data-equalizer data-equalizer-on="small"><!-- data-equalizer permite igualar tamaño de los elementos, lo usamos en las tablas y despues definimos en que tamaño queremos aplicarlo-->
+                      <!-- -offset- perite elegir apartir de cuantas columnas empezar   -->
+                      <div class="colum small-10 small-offset-1 medium-6 medium-offset-3">
+                        <div id="generic_price_table">
+                          <section>
+                            <!-- Platino  -->
+                            <ul class="pricing-table no-bullet text-center">
+                              <li class="title">Platino</li>
+                              <li class="price">$120</li>
+                              <li class="description">Acceso Viernes, sábado y domingo</li>
+                              <li>2 Bebidas por día</li>
+                              <li>Estacionamiento Incluido</li>
+                              <li>Participa en sorteos</li>
+                              <li><a class="button" href="#">Comprar Platino</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <!-- Gold  -->
+                        <div class="colum small-6 medium-4 medium-offset-2">
+                          <div id="generic_price_table">
+                            <section>
+                              <ul class="pricing-table no-bullet text-center">
+                                <li class="title">Gold</li>
+                                <li class="price">$90</li>
+                                <li class="description">Acceso Viernes, sábado y domingo</li>
+                                <li data-equalizer-watch>2 Bebidas por día</li>
+                                <li><a class="button" href="#">Comprar Gold</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                        <!-- Silver  -->
+                        <div class="colum small-6 medium-4">
+                          <div id="generic_price_table">
+                            <section>
+                              <ul class="pricing-table no-bullet text-center">
+                                <li class="title">Silver</li>
+                                <li class="price">$65</li>
+                                <li class="description">Acceso Viernes, sábado y domingo</li>
+                                <li data-equalizer-watch></li><!-- llama al data-equalizer del row arriba -->
+                                <li><a class="button" href="#">Comprar Silver</a></li>
+                              </ul>
+                            </div>
+                          </div>
+
+                      </div>
+                    </section>
+                  <!-- /Comprar Boletos  -->
+
+                  <!-- Suscribete  -->
+                  <section id="suscribete-container" data-magellan-target="suscribete-container">
+                    <h3 class="text-center">Suscríbete</h3>
+                    <h4 class="text-center"><small> Y resibe las ultimas novedades</small></h4>
+                    <!-- data-abide, para validar formularios con fondation(abide)  -->
+                    <form action="https://formspree.io/micorreo@ejemplo.com" method="post" novalidate data-abide><!-- novalidate, permite que el navegador no arroje el mensaje de correo no valido -->
+                        <div data-abide-error class="row columns samll-12 medium-6 text-center"  class="error-container" style="display: none;">
+                          <p><i class="fi-alert"></i>Ingresó un correo electronico no válido</p>
+
+                        </div>
+                      <div class="row columns samll-12 medium-6">
+                        <div class="input-group">
+                          <span class="input-group-label"><i class="fi-mail"></i></span>
+                          <input type="email" name="email" class="input-group-field "
+                          placeholder="Tu@corre.com" required>
+                          <div class="input-group-button">
+                            <input type="submit" class="button" value="Suscribirse!!">
+                          </div>
+
+
+                        </div>
+                      </div>
+                    </form>
+
+                  </section>
+                  <!-- Suscribete -->
+
+                  <!-- Info  -->
+                    <section id="info-container" data-magellan-target="info-container">
+                      <h3 class="text-center"> Información</h3>
+
+                        <!-- data-interchange, Permite mostrar una imagen dependiento del tamaño de pantalla en el que la visualisamos
+                        <img data-interchange="[http://lagramoladekeith.com/wp-content/uploads/wordpress/Festify-Guns-n-ROses.jpg , small],
+                        [http://rko.fm/wp/wp-content/uploads/2016/04/ACDC.jpg , large]">-->
+
+                        <!-- Mapa  -->
+                        <!-- Pendiente hacer el cambia a solo imagen en pantallas pequeñas  -->
+                        <div class="colum small-12 medium-8 medium-offset-2">
+                        <iframe  class="info-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9591.621333747195!2d-116.65419895860961!3d32.059201916559104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d8ef9bd9395bed%3A0x8ef5c619f9ced241!2sEl+Cielo+Valle+de+Guadalupe!5e0!3m2!1ses!2smx!4v1516408972539"
+                           width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </div>
+                    </section>
+                      <!-- /Info  -->
+
+
+
+
+
+          </div>
+
+        </div>
+      </div>
+    <!-- /Menu movil  -->
+
+
+
+
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
